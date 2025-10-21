@@ -1,0 +1,153 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{hyperref} % For clickable links
+\usepackage{xcolor}   % To customize link color
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\usepackage{array}
+
+
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+    urlcolor=blue
+}
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08pt}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeSubheading}[2]{\vspace{0.5mm}\item\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & \textit{\footnotesize{#2}} \\\end{tabular*}\vspace{-2.4mm}}
+\newcommand{\resumeProject}[2]{\vspace{0.5mm}\item\textbf{#1} \\ \vspace{-2.4mm}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\begin{center}
+    {\Large \textbf{GOWTHAMI A}} \\[5pt]
+    Chennai, India | +91-8838421394 \\
+    
+    \href{mailto:gowthamiashok29@gmail.com}{gowthamiashok29@gmail.com} |
+    \href{https://www.linkedin.com/in/gowthamiashok/}{https://www.linkedin.com/in/gowthamiashok/} |
+    \href{https://github.com/Gowthamiashok/}{https://github.com/Gowthamiashok/}
+\end{center}
+
+
+\vspace{-2mm}
+\section{\textbf{Professional Summary}}
+Data Science practitioner with hands-on experience in healthcare analytics, machine learning, and statistical modeling. Proficient in Python, MATLAB, SQL, Tableau, and Power BI.  Experienced in ML model deployment using Docker, Streamlit and Flask for applications including prediction systems. Currently exploring Generative AI with a focus on RAG and experimenting with AI agents and automation through self projects to prepare for real-world AI challenges.
+
+\section{\textbf{Education}}
+
+\noindent
+\textbf{Vellore Institute of Technology, Chennai} | M.Sc. Data Science | CGPA: 8.44 \hfill \textit{2023 -- Present} \\
+\textit{Modules:} Machine Learning, Deep Learning, NLP, Statistics, LLMs, RAG, SQL (PostgreSQL, MySQL), Power BI.
+
+\vspace{0.1cm}
+\noindent
+\textbf{Sri Ramachandra Faculty of Engineering and Technology} | B.Sc. Data Science | CGPA: 9.08 \hfill \textit{2020 -- 2023} \\
+\textit{Modules:} Python (NumPy, Pandas, Matplotlib, Seaborn), R, Java, Tableau, Data Mining, Machine Learning, Flask.
+
+
+\section{\textbf{Experience}}
+
+\noindent
+\textbf{Xerago} | AI Engineer\hfill \textit{July 2025 - Present}
+\begin{itemize}[leftmargin=*]
+    \item Researching legacy SQL OLAP systems and implementing data modernization using Apache Airflow, Clickhouse, Meltano, dbt, and Pyarrow for scalable data pipeline architecture and enhanced analytics capabilities.
+\end{itemize}
+
+\noindent
+\textbf{ABEX} | Data and Business Analyst Intern  \hfill \textit{March 2025 - June 2025}
+\begin{itemize}[leftmargin=*]
+    \item Cleaned and structured large business datasets, optimized data workflows, and developed interactive Power BI dashboards to support strategic, data-driven decision-making. Conducted market research and supported lead identification processes to uncover business opportunities and contribute to client engagement efforts.
+\end{itemize}
+
+\noindent
+\textbf{HealthMed Technologies Private Limited} | Full Stack and ML Developer Intern \hfill \textit{April 2022 - June 2022}
+\begin{itemize}[leftmargin=*]
+    \item Developed Angular-based healthcare inventory management system with Firestore backend and deployed Flask ML models for predictive analytics of kidney disease and COVID-19 risk assessment using Docker.
+    \item Collaborated with healthcare professionals to gather clinical requirements and ensure model accuracy for real-world medical applications.
+\end{itemize}
+
+\section{\textbf{Projects}}
+
+\noindent
+\textbf{Optimizing APU Performance in Metro Trains
+Through Comparative Analysis}  \hfill \textit{March 2025}
+\begin{itemize}[leftmargin=*]
+    \item Co-authored a faculty-supervised research paper prepared for submission to IEEE Access. Designed a predictive maintenance framework for metro APUs and conducted a comparative analysis of time-series (VAR), machine learning, and deep learning models; visualized insights in Power BI to support operations and reduce equipment failure rates.
+\end{itemize}
+
+\noindent
+\textbf{Multi-Source Knowledge Hub: RAG Q&A with LangChain} \hfill \textit{February 2024}
+\begin{itemize}[leftmargin=*]
+    \item Developed a centralized Q&A system by integrating sources like Arxiv and Wikipedia using Retrieval-Augmented Generation (RAG) and LangChain, demonstrating proficiency in GenAI pipelines.
+\end{itemize}
+
+\noindent
+\textbf{Identification and Prediction of Gestational Diabetes} \hfill \textit{April 2024}
+\begin{itemize}[leftmargin=*]
+    \item Conducted comparative analysis of multiple neural architectures (FNN, CNN, RNN, hybrid CNN-RNN) for predictive modeling of gestational diabetes thereby improving accuracy for better healthcare outcomes.
+\end{itemize}
+
+\noindent
+\textbf{Psychological Chatbot for Mental Health Support} \hfill \textit{April 2023}
+\begin{itemize}[leftmargin=*]
+    \item  Developed a rule-based mental health chatbot using ANN model, incorporating basic NLP techniques (tokenization, stop-word removal, stemming, lemmatization) to preprocess user inputs and provide context-aware emotional support and guidance.
+\end{itemize}
+
+\section{\textbf{Skills}}
+\begin{itemize}[left=0pt, itemsep=0pt]
+    \item \textbf{Programming & Web Development:} Python, R, MATLAB, Java, HTML, CSS, JavaScript, Flask, Streamlit.
+    \item \textbf{Data Science & AI:} Machine Learning, Deep Learning (TensorFlow, PyTorch, Keras), NLP, Statistics, Data Mining, LLMs, RAG
+    \item \textbf{Data Tools:} SQL (PostgreSQL, MySQL), Tableau, Power BI, Excel, AWS, Docker, RESTful APIs, Git
+\end{itemize}
+
+
+\section{\textbf{Certifications}}
+\textbf{Hugging Face} | AI Agents \hfill \textit{July 2025}\\
+\textbf{Spoken Tutorial Project, IIT Bombay, VIT University Chennai Campus} | Python 3.4.3 Training \hfill \textit{April 2024}\\
+\textbf{Coursera} | SQL for Data Science \hfill \textit{March 2023}\\ 
+\textbf{AWS Academy} | AWS Academy Graduate - AWS Academy Cloud Foundations \hfill \textit{October 2022}\\ 
+\textbf{Data Camp} | Data Engineering for Everyone \hfill \textit{June 2022}\\
+
+\end{document}
