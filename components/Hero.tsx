@@ -56,8 +56,8 @@ export default function Hero() {
           className="flex justify-center mb-4"
         >
           <div className="relative">
-            <motion.img
-              src="/Gowthami_Photo.jpg"
+              <motion.img
+                src="Gowthami_Photo.jpg"
               alt="Gowthami A"
               className="w-80 h-80 object-cover rounded-full shadow-2xl border-4 border-white/20"
               whileHover={{ scale: 1.02 }}
