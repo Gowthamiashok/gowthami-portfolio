@@ -86,6 +86,17 @@ export default function About() {
       technologies: ['Power BI', 'Data Analysis', 'Market Research', 'Business Intelligence', 'Lead Identification'],
     },
     {
+      year: 'May 2023 - July 2023',
+      title: 'UX Developer Intern',
+      company: 'IDP Education India Services LLP',
+      category: 'internship',
+      description: [
+        'Enhanced IDP and IELTS web templates with responsive UI design, implementing media queries to ensure consistent, multi-device performance and accessibility.',
+        'Collaborated with design and product teams to align interface improvements with stakeholder requirements and maintain brand and usability standards.'
+      ],
+      technologies: ['Responsive Design', 'Media Queries', 'UI/UX', 'Web Templates', 'Accessibility', 'Brand Standards'],
+    },
+    {
       year: 'April 2022 - June 2022',
       title: 'Full Stack and ML Developer Intern',
       company: 'HealthMed Technologies Private Limited',
