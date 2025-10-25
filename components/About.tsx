@@ -42,6 +42,11 @@ export default function About() {
       date: 'March 2023'
     },
     {
+      title: 'SQL (Basics) Skill Certification Test',
+      issuer: 'Hackerrank',
+      date: 'February 2025'
+    },
+    {
       title: 'Python Training',
       issuer: 'Spoken Tutorial Project, IIT Bombay',
       date: 'April 2024'
@@ -59,7 +64,14 @@ export default function About() {
       title: 'AI Engineer',
       company: 'Xerago',
       category: 'work',
-      description: 'Researching legacy SQL OLAP systems and implementing data modernization using Apache Airflow, Clickhouse, Meltano, dbt, and Pyarrow for scalable data pipeline architecture and enhanced analytics capabilities.',
+      description: [
+        'Conducted an in-depth assessment of the legacy SQL OLAP environment, documenting data models, dependencies, and reporting workflows to understand existing analytical systems.',
+        'Designed the data modernization architecture and led the migration to a scalable EL system using Meltano and ClickHouse, enabling faster analytical queries and storage efficiency.',
+        'Built and automated full-load and incremental data migration pipelines, successfully migrating all source systems and establishing a stable EL data layer.',
+        'Currently replicating production analytical workflows using dbt, implementing modular and testable transformations to form the new semantic and reporting layer.',
+        'Using Apache Arrow (PyArrow) for optimized in-memory columnar processing and efficient interchange between pipeline components.',
+        'Orchestrating end-to-end workflows in Apache Airflow, ensuring reliable scheduling, monitoring, and maintainability of enterprise data pipelines.'
+      ],
       technologies: ['Apache Airflow', 'Clickhouse', 'Meltano', 'dbt', 'Pyarrow', 'SQL', 'Data Pipelines'],
     },
     {
@@ -67,7 +79,10 @@ export default function About() {
       title: 'Data and Business Analyst Intern',
       company: 'ABEX',
       category: 'internship',
-      description: 'Cleaned and structured large business datasets, optimized data workflows, and developed interactive Power BI dashboards to support strategic, data-driven decision-making.',
+      description: [
+        'Cleaned, structured, and optimized large business datasets, improving data workflows and developing interactive Power BI dashboards to support strategic, data-driven decision-making.',
+        'Conducted market research and assisted in lead identification, helping uncover new business opportunities and contributing to enhanced client engagement strategies.'
+      ],
       technologies: ['Power BI', 'Data Analysis', 'Market Research', 'Business Intelligence', 'Lead Identification'],
     },
     {
@@ -75,7 +90,10 @@ export default function About() {
       title: 'Full Stack and ML Developer Intern',
       company: 'HealthMed Technologies Private Limited',
       category: 'internship',
-      description: 'Developed Angular-based healthcare inventory management system with Firestore backend and deployed Flask ML models for predictive analytics of kidney disease and COVID-19 risk assessment.',
+      description: [
+        'Developed Angular-based healthcare inventory management system with Firestore backend and deployed Flask ML models for predictive analytics of kidney disease and COVID-19 risk assessment.',
+        'Collaborated with healthcare professionals to gather clinical requirements and ensure model accuracy for real-world medical applications.'
+      ],
       technologies: ['Angular', 'Firestore', 'Flask', 'Machine Learning', 'Docker', 'Healthcare Analytics'],
     },
     {
@@ -198,29 +216,27 @@ export default function About() {
                   </motion.div>
                 ))}
               </div>
-              {/* Second row - 2 centered cards */}
-              <div className="flex justify-center">
-                <div className="grid md:grid-cols-2 gap-6 max-w-2xl">
-                  {certifications.slice(3, 5).map((cert, index) => (
-                    <motion.div
-                      key={cert.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                      transition={{ delay: (index + 3) * 0.1 }}
-                      className="glass-effect p-6 rounded-xl hover:shadow-lg hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-300 cursor-pointer"
-                    >
-                      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                        {cert.title}
-                      </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        {cert.issuer}
-                      </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500">
-                        {cert.date}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+              {/* Second row - remaining cards laid out in three columns */}
+              <div className="grid md:grid-cols-3 gap-6 mb-6 max-w-6xl mx-auto">
+                {certifications.slice(3).map((cert, index) => (
+                  <motion.div
+                    key={cert.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ delay: (index + 3) * 0.1 }}
+                    className="glass-effect p-6 rounded-xl hover:shadow-lg hover:bg-white/10 dark:hover:bg-white/5 transition-all duration-300 cursor-pointer"
+                  >
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                      {cert.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                      {cert.issuer}
+                    </p>
+                    <p className="text-xs text-gray-500 dark:text-gray-500">
+                      {cert.date}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -276,9 +292,17 @@ export default function About() {
                     </div>
                     
                     {/* Description */}
-                    <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
+                    {Array.isArray(item.description) ? (
+                      <ul className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed list-disc list-inside">
+                        {item.description.map((line, i) => (
+                          <li key={i} className="mb-1">{line}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
                     
                     {/* Technology Tags */}
                     <div className="flex flex-wrap gap-2 justify-center">
